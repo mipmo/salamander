@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--meta tags-->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--stylesheets and favicon-->
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+
+        <title>タブ</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <a href="index.html" target="_self" class="language-selector">EN</a>
+            <h2 id="date"></h2>
+            <div class="card-container">
+                <div class="card" id="eth">
+                    <h1>だいがく</h1>
+                    <ul>
+                        <li><a href="https://www.lehrbetrieb.ethz.ch/myStudies/" target="_self">MyStudies</a></li>
+                        <li><a href="https://moodle-app2.let.ethz.ch" target="_self">Moodle</a></li>
+                        <li><a href="https://eduapp-app1.ethz.ch/" target="_self">EduApp</a></li>
+                        <li><a href="https://video.ethz.ch" target="_self">Video</a></li>
+                        <li><a href="https://expert.ethz.ch" target="_self">Code Expert</a></li>
+                    </ul>
+                </div>
+                <div class="card" id="google">
+                    <h1>グーグル</h1>
+                    <ul>
+                        <li><a href="https://www.google.com/maps" target="_self">Maps</a></li>
+                        <li><a href="https://calendar.google.com/" target="_self">Calendar</a></li>
+                        <li><a href="https://photos.google.com" target="_self">Photos</a></li>
+                        <li><a href="https://fonts.google.com/" target="_self">Fonts</a></li>
+                        <li><a href="https://drive.google.com" target="_self">Drive</a></li>
+                    </ul>
+                </div>
+                <div class="card" id="media">
+                    <h1>メディア</h1>
+                    <ul>
+                        <li><a href="https://www.youtube.com" target="_self">YouTube</a></li>
+                        <li><a href="https://www.netflix.com" target="_self">Netflix</a></li>
+                        <li><a href="https://www.spotify.com" target="_self">Spotify</a></li>
+                        <li><a href="https://www.twitch.tv" target="_self">Twitch</a></li>
+                        <li><a href="https://www.songsterr.com" target="_self">Songsterr</a></li>
+                    </ul>
+                </div>
+                <div class="card" id="tools">
+                    <h1>ツール</h1>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org" target="_self">Wikipedia</a></li>
+                        <li><a href="https://www.imgonline.com.ua/eng/get-dominant-colors.php" target="_self">Dominant Colours</a></li>
+                        <li><a href="https://ezgif.com/" target="_self">Ezgif</a></li>
+                        <li><a href="https://jisho.org" target="_self">Jisho</a></li>
+                        <li><a href="https://www.myfonts.com/pages/whatthefont" target="_self">What the Font</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./blue/index.html" target="_self" class="wat">?</a>
+        </div>
+
+        <script>
+            let date = document.getElementById("date");
+
+            setInterval(() =>{
+                let objectDate = new Date();
+                let day = objectDate.getDate();
+                let month = objectDate.getMonth() + 1;
+                let year = objectDate.getFullYear();
+                let hour = String(objectDate.getHours()).padStart(2, '0');
+                let minute = String(objectDate.getMinutes()).padStart(2, '0');
+
+                let format = "今は" + "<br>" + year + "年" + month + "月" + day + "日" + "<br>" + hour + "時" + minute + "分です";
+                date.innerHTML = format;
+
+            },250)
+        </script>
+    </body>
+</html>
